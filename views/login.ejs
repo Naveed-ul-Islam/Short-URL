@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+               <title>Login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title><%= locals.title ? title : "Login System" %></title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+        <style> 
+        body{
+    font-family: Arial, Helvetica, sans-serif, sans-serif, sans-serif;
+   }
+
+.center-div{
+    padding:6% 5%;
+
+}
+
+.btn.btn-success{
+    margin-top: 10px;
+    padding: 2px 12px;
+}
+
+form{
+    padding: 0 3%;
+}
+.container{
+    border: solid grey 1.5px;
+    border-radius: 2% 2%;
+}
+    </style>
+    </head>
+    <body>
+        <div class="text-center center-div" id="login">
+            <div class="container w-25 border-3 pt-5 pb-3">
+                <div class="title pb-5">
+                    <h2 class="font-weight-bold">Login System</h2>
+                </div>
+                <form action="/user/login" method="POST" class="pt-3">
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Enter your email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class ="form-control" name="password" placeholder="Password">
+                    </div>
+                    <button type="submit" class="btn btn-success">Login</button>
+                </form>
+            </div>
+        </div>
+      
+    
+    </body>
+</html>
